@@ -17,11 +17,11 @@ $ sudo apt-get update
 $ sudo apt-get install openjdk-8-jdk git python-dev python3-dev python-numpy python3-numpy build-essential python-pip python3-pip python-virtualenv swig python-wheel libcurl3-dev
 
 Create a Virtualenv environment in the directory for python and python 3:
-# for python 2
-virtualenv --system-site-packages -p python ~/tensorflow
+#for python 2
+$ virtualenv --system-site-packages -p python ~/tensorflow
 
-# for python 3 
-virtualenv --system-site-packages -p python3 ~/tensorflow
+#for python 3 
+$ virtualenv --system-site-packages -p python3 ~/tensorflow
 
 (Note: To delete a virtual environment, just delete its folder.  For example, In our cases, it would be rm -rf keras-tf-venv or rm -rf keras-tf-venv3.)
 
@@ -112,13 +112,13 @@ For more information : https://developer.download.nvidia.com/compute/cuda/9.1/Pr
 Once the CUDA Toolkit is installed, download cuDNN v6.0 for Cuda 8.0 from NVIDIA website (Note that you will be asked to register an NVIDIA developer account in order to download) and extract into /usr/local/cuda via:
 
 4a.  Install Runtime library
-sudo dpkg -i $(runtime library deb)
+$ sudo dpkg -i $(runtime library deb)
  
 4b.  Install developer library
-sudo dpkg -i $(developer library deb)
+$ sudo dpkg -i $(developer library deb)
  
 4c.  Install code samples and user guide
-sudo dpkg -i $(document library deb)
+$ sudo dpkg -i $(document library deb)
 
 (Note: Download cuDNN v6.0 not cuDNN v7.0 as tensorflow-gpu doesn't support it)
 
