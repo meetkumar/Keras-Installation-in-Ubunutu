@@ -53,7 +53,9 @@ $ sudo apt-get purge nvidia*
 2c. Add the graphics drivers PPA
 
 Let us go ahead and add the graphics-driver PPA -
-sudo add-apt-repository ppa:graphics-drivers
+
+$ sudo add-apt-repository ppa:graphics-drivers
+
 And update
 
 $ sudo apt-get update
@@ -141,6 +143,8 @@ $ sudo dpkg -i $(document library deb)
 
 (Note: Download cuDNN v6.0 not cuDNN v7.0 as tensorflow-gpu doesn't support it)
 
+For more information : https://developer.nvidia.com/cudnn
+
 # 5: Install TensorFlow
 
 Before installing TensorFlow and Keras, be sure to activate your python virtual environment first.
@@ -153,12 +157,17 @@ $ source ~/keras-tf-venv/bin/activate  # If using bash
 #for python 3
 
 $ source ~/keras-tf-venv3/bin/activate  # If using bash
+
 (keras-tf-venv3)$  # Your prompt should change
 
 Install TensorFlow using one of the following commands (https://www.tensorflow.org/install/install_linux#InstallingVirtualenv):
+
 (keras-tf-venv)$ pip install --upgrade tensorflow   # Python 2.7; CPU support (no GPU support)
+
 (keras-tf-venv3)$ pip3 install --upgrade tensorflow   # Python 3.n; CPU support (no GPU support)
+
 (keras-tf-venv)$ pip install --upgrade tensorflow-gpu  # Python 2.7;  GPU support
+
 (keras-tf-venv3)$ pip3 install --upgrade tensorflow-gpu # Python 3.n; GPU support
 
 Note: If the commands for installing TensorFlow given above failed (typically because you invoked a pip version lower than 8.1), install TensorFlow in the active virtualenv environment by issuing a command of the following format:
